@@ -1,0 +1,11 @@
+<html>
+<body>
+{%if namae%}はじめまして{{namae}}さん<br>{%endif%}
+{%if hitokoto%}ひとことは{{hitokoto}}だったね<br>{%endif%}
+<form action="/toroku" method="POST">
+<input type="text" name="namae" placeholder="お名前">
+<input type="text" name="hitokoto" placeholder="一言">
+<input type="submit" value="登録">
+</form>
+</body>
+</html>
