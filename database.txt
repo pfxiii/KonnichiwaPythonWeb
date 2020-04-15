@@ -1,0 +1,5 @@
+CREATE USER 'pfxiii'@'localhost' IDENTIFIED BY 'pfxiii';
+CREATE DATABASE pfxiii;
+GRANT INSERT,SELECT,UPDATE,DELETE on pfxiii.* to 'pfxiii'@'localhost';
+USE pfxiii;
+CREATE TABLE pfxiii(namae VARCHAR(64) primary key,hitokoto VARCHAR(64));

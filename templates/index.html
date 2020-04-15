@@ -1,11 +1,26 @@
 <html>
 <body>
-{%if namae%}はじめまして{{namae}}さん<br>{%endif%}
-{%if hitokoto%}ひとことは{{hitokoto}}だったね<br>{%endif%}
+<form action="/sakujo" method="POST">    
+<table>
+{%for record in ichiran%}
+<tr>
+<td>
+<input name="check" type="checkbox" value="{{record.namae}}">
+</td>
+<td> 
+{{record.namae}}さんのひとこと
+</td>
+<td>
+{{record.hitokoto}}
+</td>
+</tr>
+{%endfor%}
+</table>
+<input type="submit" value="削除">
+</form>
 <form action="/toroku" method="POST">
 <input type="text" name="namae" placeholder="お名前">
 <input type="text" name="hitokoto" placeholder="一言">
 <input type="submit" value="登録">
 </form>
 </body>
-</html>
